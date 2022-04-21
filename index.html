@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./assets/css/fonts.css" rel="stylesheet" />
+    <link href="./assets/css/style.css" rel="stylesheet" />
+    <title>Cadastre-se</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="signup">
+            <div class="logo">
+                <a class="logo__link" href="/"></a>
+            </div>
+            <h1 class="signup__title">Cadastre-se</h1>
+            <form class="form">
+                <div class="form__group">
+                    <label class="form__label hide" for="inputName">Nome</label>
+                    <input type="text" name="name" class="form__input-text error" id="inputName" placeholder="Nome" />
+                    <i class="form__input-icon fas fa-user"></i>
+                    <span class="form__message-error">Campo obrigatório</span>
+                </div>
+                <div class="form__group">
+                    <label class="form__label hide" for="inputEmail">E-mail</label>
+                    <input type="email" name="email" class="form__input-text" id="inputEmail" placeholder="E-mail" />
+                    <i class="form__input-icon fas fa-envelope"></i>
+                </div>
+                <div class="form__group">
+                    <label class="form__label hide" for="inputPassword">Senha</label>
+                    <input type="password" name="password" class="form__input-text" id="inputPassword" placeholder="Senha" />
+                    <i class="form__input-icon fas fa-lock"></i>
+                    <div class="requirements">
+                        <div class="requirements__progress-bar"></div>
+                        <div class="requirements__description">A senha deverá ter</div>
+                        <ul class="requirements__list">
+                            <li class="requirements__item checked">
+                                <i class="fas"></i>
+                                Pelo menos uma letra maiúscula e uma letra minúscula</li>
+                            <li class="requirements__item">
+                                <i class="fas"></i>
+                                Pelo menos um número
+                            </li>
+                            <li class="requirements__item">
+                                <i class="fas"></i>
+                                Pelo menos 1 caracter especial</li>
+                            <li class="requirements__item">
+                                <i class="fas"></i>
+                                Pelo menos 8 caracteres
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="form__group">
+                    <input type="checkbox" name="terms" class="form__input-checkbox" id="inputTerms" />
+                    <label class="form__label" for="inputTerms">Concordo com os <a class="form__link" href="/">termos</a> e <a class="form__link" href="/">política de privacidade</a></label>
+                </div>
+                <div class="form__group form__group--center">
+                    <button class="form__button-submit" type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
