@@ -15,37 +15,40 @@
                 <a class="logo__link" href="/"></a>
             </div>
             <h1 class="signup__title">Cadastre-se</h1>
-            <form class="form">
+            <form class="form" data-form>
                 <div class="form__group">
                     <label class="form__label hide" for="inputName">Nome</label>
-                    <input type="text" name="name" class="form__input-text error" id="inputName" placeholder="Nome" />
+                    <input type="text" name="name" class="form__input-text" id="inputName" placeholder="Nome" required data-input/>
                     <i class="form__input-icon fas fa-user"></i>
-                    <span class="form__message-error">Campo obrigatório</span>
+                    <span class="form__message-error" data-error-message></span>
                 </div>
                 <div class="form__group">
                     <label class="form__label hide" for="inputEmail">E-mail</label>
-                    <input type="email" name="email" class="form__input-text" id="inputEmail" placeholder="E-mail" />
+                    <input type="email" name="email" class="form__input-text" id="inputEmail" placeholder="E-mail" required data-input />
                     <i class="form__input-icon fas fa-envelope"></i>
+                    <span class="form__message-error" data-error-message></span>
                 </div>
                 <div class="form__group">
                     <label class="form__label hide" for="inputPassword">Senha</label>
-                    <input type="password" name="password" class="form__input-text" id="inputPassword" placeholder="Senha" />
+                    <input type="password" name="password" class="form__input-text" id="inputPassword" placeholder="Senha" required data-input />
                     <i class="form__input-icon fas fa-lock"></i>
+                    <i class="form__input-icon fas fa-eye" data-password-eye></i>
+                    <span class="form__message-error" data-error-message></span>
                     <div class="requirements">
-                        <div class="requirements__progress-bar"></div>
+                        <div class="requirements__progress-bar" data-requirement-progressbar></div>
                         <div class="requirements__description">A senha deverá ter</div>
                         <ul class="requirements__list">
-                            <li class="requirements__item checked">
+                            <li class="requirements__item" data-requirement-item>
                                 <i class="fas"></i>
-                                Pelo menos uma letra maiúscula e uma letra minúscula</li>
-                            <li class="requirements__item">
+                                Pelo menos 1 letra maiúscula e 1 letra minúscula</li>
+                            <li class="requirements__item" data-requirement-item>
                                 <i class="fas"></i>
-                                Pelo menos um número
+                                Pelo menos 1 número
                             </li>
-                            <li class="requirements__item">
+                            <li class="requirements__item" data-requirement-item>
                                 <i class="fas"></i>
                                 Pelo menos 1 caracter especial</li>
-                            <li class="requirements__item">
+                            <li class="requirements__item" data-requirement-item>
                                 <i class="fas"></i>
                                 Pelo menos 8 caracteres
                             </li>
@@ -53,8 +56,9 @@
                     </div>
                 </div>
                 <div class="form__group">
-                    <input type="checkbox" name="terms" class="form__input-checkbox" id="inputTerms" />
+                    <input type="checkbox" name="terms" class="form__input-checkbox" id="inputTerms" required data-input/>
                     <label class="form__label" for="inputTerms">Concordo com os <a class="form__link" href="/">termos</a> e <a class="form__link" href="/">política de privacidade</a></label>
+                    <span class="form__message-error" data-error-message>Campo obrigatório</span>
                 </div>
                 <div class="form__group form__group--center">
                     <button class="form__button-submit" type="submit">Enviar</button>
@@ -62,5 +66,7 @@
             </form>
         </div>
     </div>
+    <script src="./assets/js/show-password.js"></script>
+    <script src="./assets/js/form-validation.js"></script>
 </body>
 </html>

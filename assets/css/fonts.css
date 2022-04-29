@@ -33,7 +33,7 @@ font-weight: 900;
     content: "\f06e"; 
 }
 
-.fa-eye-slash::before {
+.fa-eye.slash::before {
     content: "\f070"; 
 }
 
